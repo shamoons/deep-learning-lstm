@@ -189,4 +189,5 @@ callbacks = [checkpoint, lr_reducer, lr_scheduler]
 history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs,
                     validation_data=(x_test, y_test), shuffle=True, callbacks=callbacks)
 
+
 pandas.DataFrame(history.history).to_csv("history2.csv")

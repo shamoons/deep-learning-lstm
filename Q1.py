@@ -73,6 +73,7 @@ datagen = ImageDataGenerator(
 
 
 history = model.fit_generator(datagen.flow(
-    x_train, y_train, batch_size=batch_size), steps_per_epoch=len(x_train) / 32, epochs=epochs)
+    x_train, y_train, batch_size=batch_size), steps_per_epoch=len(x_train) / 32, epochs=epochs, validation_data=(
+    x_test, y_test))
 
 pandas.DataFrame(history.history).to_csv("history.csv")

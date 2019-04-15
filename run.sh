@@ -4,7 +4,7 @@
 #SBATCH --gres gpu:1 
 #SBATCH --qos gpu-award 
 
-module load python/3.7.0
+module load python/3.6.6
 module load cuda/9.0
 
 export CUDA_HOME=/usr/local/cuda-9.0

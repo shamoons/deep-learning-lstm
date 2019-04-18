@@ -66,4 +66,4 @@ hist = model.fit(X_train, y_train, validation_data=(
 
 
 scores = model.evaluate(X_test, y_test, verbose=0)
-print("Accuracy: %.2f%%" % (scores[1]*100))
+print("Q3 Accuracy: %.2f%%" % (scores[1]*100))

@@ -66,12 +66,12 @@ Hint: You can use (https://keras.io/preprocessing/image/#imagedatagenerator)
 datagen = ImageDataGenerator(
     featurewise_center=True,
     featurewise_std_normalization=True,
-    rotation_range=90,
+    zoom_range=0.25,
+    shear_range=0.2,
     width_shift_range=0.5,
     height_shift_range=0.5,
-    horizontal_flip=True,
-    vertical_flip=True
-    )
+    horizontal_flip=True
+)
 
 
 history = model.fit_generator(datagen.flow(
